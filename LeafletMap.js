@@ -46,9 +46,11 @@ function getLocalityOfTheCoordinate(latitude, longitude, markerId) {
             console.log(resJson);
             var info = document.getElementById(markerId); // Use markerId to update the correct div
             if (resJson.locality) {
-                info.innerHTML = `Latitude: ${latitude}, Longitude: ${longitude} - Locality: ${resJson.locality}`;
+                info.innerHTML = `${markerId}: Latitude: ${latitude}, Longitude: ${longitude}, 
+                Locality: ${resJson.locality}`;
             } else {
-                info.innerHTML = `Latitude: ${latitude}, Longitude: ${longitude} - Locality: Not found`;   
+                info.innerHTML = `${markerId}: Latitude: ${latitude}, Longitude: ${longitude}, 
+                Locality: Not found`;   
             }
         });
 }
